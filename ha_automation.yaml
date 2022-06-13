@@ -1,0 +1,198 @@
+alias: Send temperature to AC
+description: ''
+trigger:
+  - platform: time_pattern
+    seconds: /30
+condition: []
+action:
+  - choose:
+      - conditions:
+          - type: is_temperature
+            condition: device
+            device_id: 
+            entity_id: sensor.room_temperature
+            domain: sensor
+            below: 17
+        sequence:
+          - service: remote.send_command
+            data:
+              device: AC
+              command: Send 17C
+            target:
+              device_id: 
+      - conditions:
+          - type: is_temperature
+            condition: device
+            device_id: 
+            entity_id: sensor.room_temperature
+            domain: sensor
+            below: 18
+        sequence:
+          - service: remote.send_command
+            data:
+              device: AC
+              command: Send 18C
+            target:
+              device_id: 
+      - conditions:
+          - type: is_temperature
+            condition: device
+            device_id: 
+            entity_id: sensor.room_temperature
+            domain: sensor
+            below: 19
+        sequence:
+          - service: remote.send_command
+            data:
+              device: AC
+              command: Send 19C
+            target:
+              device_id: 
+      - conditions:
+          - type: is_temperature
+            condition: device
+            device_id: 
+            entity_id: sensor.room_temperature
+            domain: sensor
+            below: 20
+        sequence:
+          - service: remote.send_command
+            data:
+              device: AC
+              command: Send 20C
+            target:
+              device_id: 
+      - conditions:
+          - type: is_temperature
+            condition: device
+            device_id: 
+            entity_id: sensor.room_temperature
+            domain: sensor
+            below: 21
+        sequence:
+          - service: remote.send_command
+            data:
+              device: AC
+              command: Send 21C
+            target:
+              device_id: 
+      - conditions:
+          - type: is_temperature
+            condition: device
+            device_id: 
+            entity_id: sensor.room_temperature
+            domain: sensor
+            below: 22
+        sequence:
+          - service: remote.send_command
+            data:
+              device: AC
+              command: Send 22C
+            target:
+              device_id: 
+      - conditions:
+          - type: is_temperature
+            condition: device
+            device_id: 
+            entity_id: sensor.room_temperature
+            domain: sensor
+            below: 23
+        sequence:
+          - service: remote.send_command
+            data:
+              device: AC
+              command: Send 23C
+            target:
+              device_id: 
+      - conditions:
+          - type: is_temperature
+            condition: device
+            device_id: 
+            entity_id: sensor.room_temperature
+            domain: sensor
+            below: 24
+        sequence:
+          - service: remote.send_command
+            data:
+              device: AC
+              command: Send 24C
+            target:
+              device_id: 
+      - conditions:
+          - type: is_temperature
+            condition: device
+            device_id: 
+            entity_id: sensor.room_temperature
+            domain: sensor
+            below: 25
+        sequence:
+          - service: remote.send_command
+            data:
+              device: AC
+              command: Send 25C
+            target:
+              device_id: 
+      - conditions:
+          - type: is_temperature
+            condition: device
+            device_id: 
+            entity_id: sensor.room_temperature
+            domain: sensor
+            below: 26
+        sequence:
+          - service: remote.send_command
+            data:
+              device: AC
+              command: Send 26C
+            target:
+              device_id: 
+      - conditions:
+          - type: is_temperature
+            condition: device
+            device_id: 
+            entity_id: sensor.room_temperature
+            domain: sensor
+            below: 27
+        sequence:
+          - service: remote.send_command
+            data:
+              device: AC
+              command: Send 27C
+            target:
+              device_id: 
+      - conditions:
+          - type: is_temperature
+            condition: device
+            device_id: 
+            entity_id: sensor.room_temperature
+            domain: sensor
+            below: 28
+        sequence:
+          - service: remote.send_command
+            data:
+              device: AC
+              command: Send 28C
+            target:
+              device_id: 
+      - conditions:
+          - type: is_temperature
+            condition: device
+            device_id: 
+            entity_id: sensor.room_temperature
+            domain: sensor
+            below: 29
+        sequence:
+          - service: remote.send_command
+            data:
+              device: AC
+              command: Send 29C
+            target:
+              device_id: 
+    default:
+      - service: remote.send_command
+        data:
+          device: AC
+          command: Send 30C
+        target:
+          device_id: 
+mode: single
